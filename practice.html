@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Cards</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #111;
+      color: #fff;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;      gap: 20px;
+    }
+
+    .card {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .card h3 {
+      color: #00bcd4;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">Our Values</h1>
+
+  <div class="container">
+    <div class="card">
+      <h3>Empathy</h3>
+      <p>We listen without judgment and support with care.</p>
+    </div>
+    <div class="card">
+      <h3>Support</h3>
+      <p>We’re always here — 24/7, for anyone who needs us.</p>
+    </div>
+    <div class="card">
+      <h3>Hope</h3>
+      <p>Every conversation is a chance for healing and growth.</p>
+    </div>
+  </div>
+</body>
+</html>

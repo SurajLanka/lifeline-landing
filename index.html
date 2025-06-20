@@ -2,49 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LifeLine – Mental Health Support</title>
   <style>
     body {
-      background: #111;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
       color: #fff;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
+      min-height: 100vh;
     }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #1c1c1c;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      margin: 0;
+      font-size: 32px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
     form {
       background: #222;
       padding: 20px;
       border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
+
     input, textarea {
       width: 100%;
-      margin-bottom: 10px;
-      padding: 8px;
+      padding: 10px;
       border-radius: 5px;
       border: none;
+      background: #333;
+      color: white;
+      font-size: 14px;
     }
+
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
+    }
+
     button {
       padding: 10px 20px;
       background: #00bcd4;
       border: none;
       border-radius: 5px;
-      color: #fff;
+      color: white;
+      font-weight: bold;
       cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #0097a7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+      background-color: #1c1c1c;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 24px;
+      }
+      form {
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to LifeLine</h1>
-  <form onsubmit="handleSubmit(event)">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
+
+  <header>
+    <h1>LifeLine</h1>
+  </header>
+
+  <main>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    © 2025 LifeLine. Built with ❤️ by Suraj Lanka.
+  </footer>
 
   <script>
     function handleSubmit(e) {
@@ -53,5 +121,6 @@
       e.target.reset();
     }
   </script>
+
 </body>
 </html>
